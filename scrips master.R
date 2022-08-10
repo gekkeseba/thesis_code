@@ -241,7 +241,7 @@ newdata_bal <- newdata_bal %>% filter(before_after != '52')
 is.pbalanced(newdata_bal)
 #########setup treatment dummy 1 / 0 for all banned streamers can b deleted ################
 attach(weekly_streams)
-weekly  can _streams$treatment_1 <- ifelse(weekly_streams$user == 89320, 1, 0)
+weekly_streams$treatment_1 <- ifelse(weekly_streams$user == 89320, 1, 0)
 weekly_streams$treatment_2 <- ifelse(weekly_streams$user == 9967283, 1, weekly_streams$treatment_1 )
 weekly_streams$treatment_3 <- ifelse(weekly_streams$user == 4881212, 1, weekly_streams$treatment_2 )
 weekly_streams$treatment_4 <- ifelse(weekly_streams$user == 5716, 1, weekly_streams$treatment_3 )
